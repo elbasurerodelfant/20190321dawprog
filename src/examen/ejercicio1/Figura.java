@@ -8,7 +8,7 @@ public abstract class Figura implements Movible, Comparable<Figura> {
 	private double x;
 	private double y;
 	private boolean rellena = false;
-	
+
 	public Figura(Color color, double x, double y, boolean rellena) {
 		this.color = color;
 		this.x = x;
@@ -71,16 +71,16 @@ public abstract class Figura implements Movible, Comparable<Figura> {
 	public String toString() {
 		return "Figura [color=" + color + ", x=" + x + ", y=" + y + ", rellena=" + rellena + "]";
 	}
-	
+
 	public abstract double getArea();
-	
+
 	public abstract double getPerimetro();
 
 	public void mover(double dx, double dy) {
 		x += dx;
 		y += dy;
 	}
-	
+
 	@Override
 	public int compareTo(Figura o) {
 		if (getArea() < o.getArea())
@@ -89,5 +89,5 @@ public abstract class Figura implements Movible, Comparable<Figura> {
 			return 1;
 		return 0;
 	}
-	
+
 }

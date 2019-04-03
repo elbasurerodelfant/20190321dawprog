@@ -2,12 +2,12 @@ package examen.ejercicio1;
 
 import java.awt.image.BufferedImage;
 
-public class Sprite implements Movible{
+public class Sprite implements Movible {
 
 	private BufferedImage bitmap;
 	private double x;
 	private double y;
-	
+
 	public Sprite(BufferedImage bitmap, double x, double y) {
 		super();
 		this.bitmap = bitmap;
@@ -49,5 +49,5 @@ public class Sprite implements Movible{
 		x += dx;
 		y += dy;
 	}
-	
+
 }

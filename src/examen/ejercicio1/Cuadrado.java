@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Cuadrado extends Figura {
 
 	private double lado;
-	
+
 	public Cuadrado(Color color, double x, double y, boolean rellena, double lado) {
 		super(color, x, y, rellena);
 		this.lado = lado;
@@ -48,5 +48,5 @@ public class Cuadrado extends Figura {
 	public String toString() {
 		return "Cuadrado [lado=" + lado + "]" + super.toString();
 	}
-	
+
 }

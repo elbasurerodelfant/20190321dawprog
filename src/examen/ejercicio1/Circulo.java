@@ -5,7 +5,7 @@ import java.awt.Color;
 public class Circulo extends Figura {
 
 	private double radio;
-	
+
 	public Circulo(Color color, double x, double y, boolean rellena, double radio) {
 		super(color, x, y, rellena);
 		this.radio = radio;
@@ -48,7 +48,5 @@ public class Circulo extends Figura {
 	public String toString() {
 		return "Circulo [radio=" + radio + "]" + super.toString();
 	}
-	
-	
 
 }

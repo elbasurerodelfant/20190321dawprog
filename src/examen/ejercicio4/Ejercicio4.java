@@ -24,7 +24,9 @@ public class Ejercicio4 {
 				switch (estado) {
 				case 0:
 					try {
-						token = s.skip("fin|buscar|[a-zA-ZáéíóúÁÉÍÓÚ]+\\s+([a-zA-ZáéíóúÁÉÍÓÚ]+\\s+)*[a-zA-ZáéíóúÁÉÍÓÚ]+|[a-zA-ZáéíóúÁÉÍÓÚ]+").match().group();
+						token = s.skip(
+								"fin|buscar|[a-zA-ZáéíóúÁÉÍÓÚ]+\\s+([a-zA-ZáéíóúÁÉÍÓÚ]+\\s+)*[a-zA-ZáéíóúÁÉÍÓÚ]+|[a-zA-ZáéíóúÁÉÍÓÚ]+")
+								.match().group();
 						if (token.equals("fin"))
 							estado = 5;
 						else if (token.equals("buscar"))
@@ -42,7 +44,7 @@ public class Ejercicio4 {
 					try {
 						s.skip("-");
 						estado = 3;
-					}catch (NoSuchElementException e) {
+					} catch (NoSuchElementException e) {
 						System.out.println("Se esperaba '-'");
 						estado = 5;
 					}
@@ -51,7 +53,7 @@ public class Ejercicio4 {
 					try {
 						s.skip(":");
 						estado = 4;
-					}catch (NoSuchElementException e) {
+					} catch (NoSuchElementException e) {
 						System.out.println("Se esperaba ':'");
 						estado = 5;
 					}
@@ -61,14 +63,16 @@ public class Ejercicio4 {
 						token = s.skip("\\d{9}").match().group();
 						agenda.put(nombre, token);
 						estado = 5;
-					}catch (NoSuchElementException e) {
+					} catch (NoSuchElementException e) {
 						System.out.println("Se esperaba un teléfono");
 						estado = 5;
 					}
 					break;
 				case 4:
 					try {
-						token = s.skip("[a-zA-ZáéíóúÁÉÍÓÚ]+\\s+([a-zA-ZáéíóúÁÉÍÓÚ]+\\s+)*[a-zA-ZáéíóúÁÉÍÓÚ]+|[a-zA-ZáéíóúÁÉÍÓÚ]+").match().group();
+						token = s.skip(
+								"[a-zA-ZáéíóúÁÉÍÓÚ]+\\s+([a-zA-ZáéíóúÁÉÍÓÚ]+\\s+)*[a-zA-ZáéíóúÁÉÍÓÚ]+|[a-zA-ZáéíóúÁÉÍÓÚ]+")
+								.match().group();
 						String telefono = agenda.get(token);
 						if (telefono != null)
 							System.out.println(token + " -> " + telefono);

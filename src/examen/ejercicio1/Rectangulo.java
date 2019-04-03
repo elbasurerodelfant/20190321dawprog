@@ -6,7 +6,7 @@ public class Rectangulo extends Figura {
 
 	private double base;
 	private double altura;
-	
+
 	public Rectangulo(Color color, double x, double y, boolean rellena, double base, double altura) {
 		super(color, x, y, rellena);
 		this.base = base;
@@ -62,5 +62,4 @@ public class Rectangulo extends Figura {
 		return "Rectangulo [base=" + base + ", altura=" + altura + "]" + super.toString();
 	}
 
-	
 }

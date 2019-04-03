@@ -23,24 +23,24 @@ public class Cuadrado2 extends Rectangulo {
 		super(x, y, rellena, lado, lado);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public void setBase(double base) {
 		super.setBase(base);
 		setAltura(base);
 	}
-	
+
 	@Override
 	public void setAltura(double altura) {
 		super.setAltura(altura);
 		setBase(altura);
 	}
-	
+
 	public void setLado(double lado) {
 		setAltura(lado);
 		setBase(lado);
 	}
-	
+
 	public double getLado() {
 		return getBase();
 	}
