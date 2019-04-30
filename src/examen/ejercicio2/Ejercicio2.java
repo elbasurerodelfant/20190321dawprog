@@ -41,5 +41,4 @@ public class Ejercicio2 {
 		Collections.sort(lista, comparador);
 		Collections.sort(lista, Collections.reverseOrder(comparador));
 	}
-
 }
