@@ -31,5 +31,5 @@ public class Ejercicio3 {
 			elementos.addAll(compuesto);
 		}
 		System.out.println(elementos);
-	}
+	} 
 }
